@@ -1,0 +1,206 @@
+/*This is the style sheet for the carsouls in the page*/
+
+#slider-container{
+    
+    background-image:;
+	background-size:100% 100%;
+	width: 94%;
+	margin: 0 auto;
+	padding:1.5rem;
+	margin-top: 0;
+	background-repeat: no-repeat;
+	animation:example 7s ease-in-out infinte alternate;
+}
+
+
+#slider{
+	width: 54%;
+	/*border-radius: 20px;*/
+	height: 20vw;
+	margin: 2em auto;
+	position: relative;
+	transform-style: preserve-3d;
+    perspective: 2000px;
+    
+}
+
+
+input[type="radio"]
+{
+	  position: relative;
+	  top: 100%;
+	  width: 18px;
+	  height: 18px;
+	  left: 50%;
+	  margin: 0px;
+	  margin-right: 15px;
+	  transform:  translateX(-120px);
+	  cursor: pointer;
+      opacity: .4;
+      display:none;
+
+}
+
+input[type="radio"]:nth-child(7)
+{
+	margin-right: 0px;
+}
+
+input[type="radio"]:checked{
+	opacity: 1;
+}
+
+#slider label{
+	position: absolute;
+	width: 100%;
+	top: 10%;
+	height: 100%;
+	/*border-radius: 20px;*/
+	left: 0;
+	font-size: 2em;
+	color: white;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition:transform 300ms ease-in-out;
+}
+
+
+
+
+#s1:checked~#slide1,#s2:checked~#slide2,#s3:checked~#slide3,
+#s4:checked~#slide4,#s5:checked~#slide5,
+#s6:checked~#slide6,#s7:checked~#slide7{
+	transform: translate3d(0%,0,0);
+	border:1px solid white;
+	box-shadow: 0px 13px 26px 10px rgba(0,0,0,.6) , 0px 12px 6px rgba(0,0,0,0.5)
+}
+#s1:checked~#slide2,#s2:checked~#slide3,#s3:checked~#slide4,
+#s4:checked~#slide5,#s5:checked~#slide6,
+#s6:checked~#slide7,#s7:checked~#slide1{
+	transform: translate3d(20%,0,-100px);
+	box-shadow: 0px 8px 16px rgba(0,0,0,0.5), 0px 8px 4px rgba(0,0,0,0.4);
+}
+#s1:checked~#slide3,#s2:checked~#slide4,#s3:checked~#slide5,
+#s4:checked~#slide6,#s5:checked~#slide7,
+#s6:checked~#slide1,#s7:checked~#slide2{
+	transform: translate3d(40%,0,-200px);
+	box-shadow: 0PX 5px 5px rgba(0,0,0,.3);
+}
+#s1:checked~#slide4,#s2:checked~#slide5,#s3:checked~#slide6,
+#s4:checked~#slide7,#s5:checked~#slide1,
+#s6:checked~#slide2,#s7:checked~#slide3{
+	transform: translate3d(60%,0,-300px);
+	box-shadow: 0px 4px 4px rgba(0,0,0,.3);
+}
+#s1:checked~#slide5,#s2:checked~#slide6,#s3:checked~#slide7,
+#s4:checked~#slide1,#s5:checked~#slide2,
+#s6:checked~#slide3,#s7:checked~#slide4{
+	transform: translate3d(-20%,0,-100px);
+	box-shadow: 0px 8px 16px rgba(0,0,0,0.5), 0px 8px 4px rgba(0,0,0,0.4);
+}
+#s1:checked~#slide6,#s2:checked~#slide7,#s3:checked~#slide1,
+#s4:checked~#slide2,#s5:checked~#slide3,
+#s6:checked~#slide4,#s7:checked~#slide5{
+	transform: translate3d(-40%,0,-200px);
+	box-shadow: 0PX 5px 5px rgba(0,0,0,.3);
+}
+#s1:checked~#slide7,#s2:checked~#slide1,#s3:checked~#slide2,
+#s4:checked~#slide3,#s5:checked~#slide4,
+#s6:checked~#slide5,#s7:checked~#slide6{
+	transform: translate3d(-60%,0,-300px);
+	box-shadow: 0px 4px 4px rgba(0,0,0,.3);
+}
+
+label img{
+	max-width: 100%;
+	width: 100%;
+	/*border-radius: 20px;*/
+	height: 100%;
+}
+
+
+
+#carsoul-2-slider{
+	width: 40%;
+	height: 50vh;
+
+	margin: 20px auto;
+
+	position: relative;
+	transform-style: preserve-3d;
+	perspective: 1000px;
+	animation:animation 5s infinite;
+}
+
+#carsoul-2-slider input[type='radio']{
+	transform: translateX(-46px);
+		display: none;
+}
+
+#carsoul-2-slider label{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	transition: .4s ease;
+}
+#carsoul-2-slider label img{
+	width: 100%;
+	height: 100%;
+	border-radius: 0;
+}
+
+#carsoul-2-slider label span{
+		position: absolute;
+		color: white;
+		font-size: 300%;
+		font-weight: bold;
+		font-family: cursive;
+		font-family: 'Allura';
+		display:none;
+}
+
+#carsoul-2-s1:checked~#carsoul-2-slide1 span,#carsoul-2-s2:checked~#carsoul-2-slide2 span,#carsoul-2-s3:checked~#carsoul-2-slide3 span{
+		display: inline-block;
+}
+
+
+
+#carsoul-2-s1:checked~#carsoul-2-slide1,#carsoul-2-s2:checked~#carsoul-2-slide2,#carsoul-2-s3:checked~#carsoul-2-slide3{
+	transform: translate3d(0%,0,0);
+	box-shadow: 0px 13px 26px white;
+}
+#carsoul-2-s1:checked~#carsoul-2-slide2,#carsoul-2-s2:checked~#carsoul-2-slide3,#carsoul-2-s3:checked~#carsoul-2-slide1{
+	transform: translate3d(70%,0,-100px);
+	box-shadow: 0px 6px 13px white;
+
+}
+#carsoul-2-s1:checked~#carsoul-2-slide3,#carsoul-2-s2:checked~#carsoul-2-slide1,#carsoul-2-s3:checked~#carsoul-2-slide2{
+	transform: translate3d(-70%,0,-100px);
+	box-shadow: 0px 6px 13px white;
+}
+
+@media screen and (max-width: 740px)
+{
+	
+	section#carsoul-2-slider label span
+	{
+		font-size: 200%;
+	}
+}
+
+@media screen and (max-width: 580px)
+{
+	
+	section#carsoul-2-slider label span
+	{
+		font-size: 100%;
+	}
+}
+
